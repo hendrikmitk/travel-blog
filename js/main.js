@@ -32,7 +32,7 @@ let map;
 
 // Initialize map
 function initMap() {
-	const center = { lat: 40.504776, lng: 11.627462 };
+	const center = { lat: 42.41, lng: 11.83 };
 	map = new google.maps.Map(document.getElementById("map"), {
 		center: center,
 		zoom: 6,
