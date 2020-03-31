@@ -15,15 +15,6 @@ body {
 	font-style: 62.5%;
 }
 
-#content {
-	position: relative;
-}
-
-#header {
-	position: absolute;
-	z-index: 1;
-}
-
 h1.header-h1 {
 	font-family: "Monoton";
 	font-size: 5.2rem;

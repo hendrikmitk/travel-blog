@@ -6,11 +6,11 @@ const db = firebase.firestore();
 
 // Create info window html with template literals
 const createString = place =>
-	`<div class="m-10">
-	<div class="mx-auto max-w-sm rounded-lg overflow-hidden justify-center bg-gray-200">
+	`<div class="my-4 ml-4 mr-3">
+	<div class="mx-auto max-w-sm rounded-lg overflow-hidden justify-center bg-gray-200 border-2 border-blue-800">
 	<img class="w-full" src="${place.image ? place.image.src : ""}" alt="${place.image ? place.image.alt : ""}">
 	<div class="px-6 py-4">
-	<h2 class="font-bold text-xl mb-2">${place.title}</h2>
+	<h2 class="font-bold text-xl text-blue-800 mb-2">${place.title}</h2>
 	<p class="text-gray-700 text-base">${place.text}</p>
 	</div>
 	<div class="px-6 flex items-center">
@@ -20,7 +20,7 @@ const createString = place =>
 	<p class="text-gray-600">${place.date.toDate ? place.date.toDate().toDateString() : place.date}</p>
 	</div>
 	</div>
-	<p class="px-6 py-3 text-gray-600 text-s font-light"><b>Location:</b> ${place.location.city}, ${place.location.country}</p>
+	<p class="px-6 pt-3 pb-6 text-gray-600 text-s font-light"><b>Location:</b> ${place.location.city}, ${place.location.country}</p>
 	</div>
 	</div>`;
 
