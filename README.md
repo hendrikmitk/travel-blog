@@ -37,7 +37,7 @@ Goal is to publish a Travel Blog where you display a map and markers with posts 
 #### Admin View
 
 -   ~~Put a link on the menu bar: "ADMIN".~~
--   This should go to an HTML file `admin.html`.
+-   ~~This should go to an HTML file `admin.html`.~~
 -   ~~This contains the list of blog posts (as in Micro Blog).~~
 -   ~~At the bottom, create a form to submit a new blog post.~~
 -   ~~On submit, send the new blog post to Firestore.~~
