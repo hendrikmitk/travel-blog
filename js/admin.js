@@ -40,3 +40,54 @@ db.collection("posts")
 			content.append(div.firstChild);
 		});
 	});
+
+// Create new blog post
+const createNewBlogPost = e => {
+	e.preventDefault();
+
+	// Get values from form
+	const newPostTitle = document.getElementById("grid-title").value;
+	const newPostText = document.getElementById("grid-text").value;
+	const newPostCity = document.getElementById("grid-city").value;
+	const newPostCountry = document.getElementById("grid-country").value;
+	const newPostDate = new Date();
+
+	console.table([
+		["Title:", newPostTitle],
+		["Text:", newPostText],
+		["City:", newPostCity],
+		["Country:", newPostCountry],
+		["Date:", newPostDate],
+	]);
+
+	// Send to Firestore
+	db.collection("posts")
+		.add({
+			title: newPostTitle,
+			text: newPostText,
+			location: {
+				city: newPostCity,
+				country: newPostCountry,
+				coordinates: {
+					lat: 35.03,
+					lng: 17.82,
+				},
+			},
+			date: newPostDate,
+			author: "Hendrik Harlichs",
+			author_image_src: "img/hein_bloed_2.png",
+			author_image_alt: "Avatar of Hein Blöd",
+			image: {
+				alt: "Placeholder image",
+				src: "img/placeholder.jpg",
+			},
+		})
+		.then(docRef => {
+			console.log("Blog post created with ID: ", docRef.id);
+		})
+		.catch(error => {
+			console.error("Error adding document: ", error);
+		});
+};
+
+document.getElementById("newPostForm").addEventListener("submit", createNewBlogPost);
