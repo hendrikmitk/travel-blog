@@ -12,36 +12,36 @@ Goal is to publish a Travel Blog where you display a map and markers with posts 
 
 #### World Map with Google Maps API
 
--   Use the Google Maps JavaScript API to display a world map.
--   For each blog post, put a marker on the map at the location of the post.
--   Add a menu bar with title (e.g. "Travel Blog") on the left and author (profile picture, name) on the right.
+-   ~~Use the Google Maps JavaScript API to display a world map.~~
+-   ~~For each blog post, put a marker on the map at the location of the post.~~
+-   ~~Add a menu bar with title (e.g. "Travel Blog") on the left and author (profile picture, name) on the right.~~
 
 #### Display Blog Posts at Location
 
--   Make the markers clickable: on click, show the blog post at that location as InfoWindow.
--   A blog post should contain:
-    -   image
-    -   title
-    -   text
-    -   author with name and image
-    -   date
-    -   location with city and country
+-   ~~Make the markers clickable: on click, show the blog post at that location as InfoWindow.~~
+-   ~~A blog post should contain:~~
+    -   ~~image~~
+    -   ~~title~~
+    -   ~~text~~
+    -   ~~author with name and image~~
+    -   ~~date~~
+    -   ~~location with city and country~~
 
 #### Get Blog Posts from Firestore
 
--   Store the blog posts on Firebase Firestore and load them with the Firebase JavaScript API.
--   Also save the coordinates of a location with latitude and longitude.
--   Load the blog posts as soon as the map is loaded (inside the `initMap()` function).
--   Save Markers and InfoWindows in global arrays to handle click events easier.
+-   ~~Store the blog posts on Firebase Firestore and load them with the Firebase JavaScript API.~~
+-   ~~Also save the coordinates of a location with latitude and longitude.~~
+-   ~~Load the blog posts as soon as the map is loaded (inside the `initMap()` function).~~
+-   ~~Save Markers and InfoWindows in global arrays to handle click events easier.~~
 
 #### Admin View
 
--   Put a link on the menu bar: "ADMIN".
+-   ~~Put a link on the menu bar: "ADMIN".~~
 -   This should go to an HTML file `admin.html`.
--   This contains the list of blog posts (as in Micro Blog).
--   At the bottom, create a form to submit a new blog post.
--   On submit, send the new blog post to Firestore.
--   For the images, save the image in your project manually and save the relative path as string, e.g. `"img/barcelona.jpg"`.
+-   ~~This contains the list of blog posts (as in Micro Blog).~~
+-   ~~At the bottom, create a form to submit a new blog post.~~
+-   ~~On submit, send the new blog post to Firestore.~~
+-   ~~For the images, save the image in your project manually and save the relative path as string, e.g. `"img/barcelona.jpg"`.~~
 
 #### Authentication
 
