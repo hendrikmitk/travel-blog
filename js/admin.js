@@ -7,8 +7,8 @@ const db = firebase.firestore();
 // Get element in the DOM
 const content = document.getElementById("feed");
 
-// Create html with template literals
-const transformObjectToString = place =>
+// Create post html with template literals
+const createStringPost = place =>
 	`<div class="mx-auto max-w-sm rounded-lg overflow-hidden justify-center shadow-lg bg-gray-200 border-2 border-blue-800 mb-20">
 	<img class="w-full" src="${place.image ? place.image.src : ""}" alt="${place.image ? place.image.alt : ""}">
 	<div class="px-6 py-4">
@@ -31,7 +31,7 @@ db.collection("posts")
 	.then(posts => {
 		posts.forEach(post => {
 			const firestoreJson = post.data();
-			const firestoreHtml = transformObjectToString(firestoreJson);
+			const firestoreHtml = createStringPost(firestoreJson);
 			const div = document.createElement("div");
 			div.innerHTML = firestoreHtml;
 			// const weatherElem = div.querySelector("#weather");
