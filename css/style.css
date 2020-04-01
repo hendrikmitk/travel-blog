@@ -5,7 +5,16 @@ button:active {
 	outline-style: none;
 }
 
-button:hover {
+button.active-button {
+	border-radius: 2rem;
+	font-weight: 400;
+	font-size: 1.2rem;
+	padding: 0.6rem 0;
+	transition: 0.3s;
+	width: 10rem;
+}
+
+button.active-button:hover {
 	transform: scale(1.125);
 }
 
@@ -20,15 +29,6 @@ body {
 h1.header-h1 {
 	font-family: "Monoton";
 	font-size: 5.2rem;
-}
-
-button.header-button {
-	border-radius: 2rem;
-	font-weight: 400;
-	font-size: 1.2rem;
-	padding: 0.6rem 0;
-	transition: 0.3s;
-	width: 10rem;
 }
 
 p.header-p {
