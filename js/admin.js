@@ -34,9 +34,6 @@ db.collection("posts")
 			const firestoreHtml = createStringPost(firestoreJson);
 			const div = document.createElement("div");
 			div.innerHTML = firestoreHtml;
-			// const weatherElem = div.querySelector("#weather");
-			// const currentLocation = firestoreJson.location.city;
-			// fetchWeather(weatherElem, currentLocation);
 			content.append(div.firstChild);
 		});
 	});
@@ -92,12 +89,11 @@ const createNewBlogPost = e => {
 
 document.getElementById("newPostForm").addEventListener("submit", createNewBlogPost);
 
+// Display and colorize character amount of textarea input
 const checkInputContinuously = () => {
-	// Check and display character amount of textarea input
-	const charsText = document.getElementById("grid-text").value.length;
-	document.getElementById("input-length").innerHTML = charsText;
+	const chars = document.getElementById("grid-text").value.length;
+	document.getElementById("input-length").innerHTML = chars;
 
-	// Change color of displayed character amount
 	const c = document.getElementById("input-length");
-	document.getElementById("grid-text").value.length > 120 ? (c.style.color = "#ff0000") : (c.style.color = "#718096");
+	document.getElementById("grid-text").value.length > 120 ? (c.style.color = "#ff0000") : false;
 };
