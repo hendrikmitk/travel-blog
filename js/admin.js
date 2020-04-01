@@ -94,7 +94,7 @@ const checkInputContinuously = () => {
 	const chars = document.getElementById("grid-text").value.length;
 	document.getElementById("input-length").innerHTML = chars;
 	const c = document.getElementById("input-length");
-	// document.getElementById("grid-text").value.length > 120 ? (c.style.color = "#ff0000") : (c.style.color = "#718096");
+	// chars > 120 ? (c.style.color = "#ff0000") : (c.style.color = "#718096");
 	if (chars >= 1 && chars <= 120) {
 		c.style.color = "#718096";
 		document.getElementById("grid-button").classList.remove("inactive-button");
