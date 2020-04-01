@@ -91,3 +91,13 @@ const createNewBlogPost = e => {
 };
 
 document.getElementById("newPostForm").addEventListener("submit", createNewBlogPost);
+
+const checkInputContinuously = () => {
+	// Check and display character amount of textarea input
+	const charsText = document.getElementById("grid-text").value.length;
+	document.getElementById("input-length").innerHTML = charsText;
+
+	// Change color of displayed character amount
+	const c = document.getElementById("input-length");
+	document.getElementById("grid-text").value.length > 120 ? (c.style.color = "#ff0000") : (c.style.color = "#718096");
+};
