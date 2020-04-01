@@ -108,10 +108,10 @@ Goal is to publish a Travel Blog where you display a map and markers with posts 
 -   ~~Research how you can use JavaScript to limit the number of characters the user can type into a textarea, similar to Twitter.~~
 -   ~~For the blog post form, apply that to the textarea for the text.~~
 -   ~~Display a number below the textarea that indicates the number of characters, e.g.: `87/120` or `34 left`.~~
--   If the number of characters the user typed in is more than 120:
+-   ~~If the number of characters the user typed in is more than 120:~~
     -   ~~the number turns red~~
     -   ~~the submit button is disabled.~~
--   If the user reduces the number of characters to less than 120:
+-   ~~If the user reduces the number of characters to less than 120:~~
     -   ~~the number is grey/black again~~
     -   ~~the submit button is enabled again.~~
 
