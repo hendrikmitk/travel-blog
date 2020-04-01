@@ -95,5 +95,5 @@ const checkInputContinuously = () => {
 	document.getElementById("input-length").innerHTML = chars;
 
 	const c = document.getElementById("input-length");
-	document.getElementById("grid-text").value.length > 120 ? (c.style.color = "#ff0000") : false;
+	document.getElementById("grid-text").value.length > 120 ? (c.style.color = "#ff0000") : (c.style.color = "#718096");
 };
