@@ -94,18 +94,22 @@ const checkInputContinuously = () => {
 	const chars = document.getElementById("grid-text").value.length;
 	document.getElementById("input-length").innerHTML = chars;
 	const c = document.getElementById("input-length");
-	// chars > 120 ? (c.style.color = "#ff0000") : (c.style.color = "#718096");
 	if (chars >= 1 && chars <= 120) {
 		c.style.color = "#718096";
-		document.getElementById("grid-button").classList.remove("inactive-button");
-		document.getElementById("grid-button").classList.add("active-button");
+		document.getElementById("grid-button").classList.replace("inactive-button", "active-button");
 	} else if (chars > 120) {
 		c.style.color = "#ff0000";
-		document.getElementById("grid-button").classList.remove("active-button");
-		document.getElementById("grid-button").classList.add("inactive-button");
+		document.getElementById("grid-button").classList.replace("active-button", "inactive-button");
 	} else {
 		c.style.color = "#718096";
-		document.getElementById("grid-button").classList.remove("active-button");
-		document.getElementById("grid-button").classList.add("inactive-button");
+		document.getElementById("grid-button").classList.replace("active-button", "inactive-button");
 	}
 };
+
+// Back button function and click handler
+const backHandler = (e) => {
+	e.preventDefault(); // Prevent page reload on-click
+	window.location.href = "index.html"; // Go to index.html
+};
+
+document.getElementById("backButton").addEventListener("click", backHandler);

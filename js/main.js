@@ -24,6 +24,9 @@ const createString = (place) =>
 	</div>
 	</div>`;
 
+// TODO use firebase auth API to check if s/o has signed in, then show button
+// document.getElementById("adminButton").classList.remove("invisible");
+
 // Global arrays for info windows and markers
 const infoWindows = [];
 const markers = [];
@@ -44,8 +47,6 @@ function initMap() {
 		.get()
 		.then((posts) => {
 			posts.forEach((post) => {
-				// console.log(`${post.id} => ${JSON.stringify(post.data())}`);
-				// console.log(`This post is written by: ${post.data().author}`);
 				const placeInfo = createString(post.data());
 				let infowindow = new google.maps.InfoWindow({
 					content: placeInfo,
@@ -71,8 +72,16 @@ const closeInfoWindows = () => {
 
 // Login button function and click handler
 const loginHandler = (e) => {
-	e.preventDefault(); // Prevent page reload on-click
-	window.location.href = "login.html"; // Go to login.html
+	e.preventDefault();
+	window.location.href = "login.html";
 };
 
 document.getElementById("loginButton").addEventListener("click", loginHandler);
+
+// Admin button function and click handler
+const adminHandler = (e) => {
+	e.preventDefault();
+	window.location.href = "admin.html";
+};
+
+document.getElementById("adminButton").addEventListener("click", adminHandler);

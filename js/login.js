@@ -23,7 +23,7 @@ const login = (e) => {
 		.signInWithEmailAndPassword(email, pwd)
 		.then(() => {
 			console.log("Success!");
-			window.location.href = "admin.html"; // Go to admin.html
+			window.location.href = "index.html";
 		})
 		.catch((error) => {
 			// Handle errors here
