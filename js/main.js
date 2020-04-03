@@ -5,7 +5,7 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 // Create info window html with template literals
-const createString = place =>
+const createString = (place) =>
 	`<div class="my-4 ml-4 mr-3">
 	<div class="mx-auto max-w-sm rounded-lg overflow-hidden justify-center bg-gray-200 border-2 border-blue-800">
 	<img class="w-full" src="${place.image ? place.image.src : ""}" alt="${place.image ? place.image.alt : ""}">
@@ -35,15 +35,15 @@ function initMap() {
 	const center = { lat: 42.41, lng: 11.83 };
 	map = new google.maps.Map(document.getElementById("map"), {
 		center: center,
-		zoom: 6,
+		zoom: 5,
 		disableDefaultUI: true,
 	});
 
 	// Iterate through the Firestore database
 	db.collection("posts")
 		.get()
-		.then(posts => {
-			posts.forEach(post => {
+		.then((posts) => {
+			posts.forEach((post) => {
 				// console.log(`${post.id} => ${JSON.stringify(post.data())}`);
 				// console.log(`This post is written by: ${post.data().author}`);
 				const placeInfo = createString(post.data());

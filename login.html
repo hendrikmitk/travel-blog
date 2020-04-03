@@ -6,10 +6,10 @@
     <link href="css/tailwind.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=block" rel="stylesheet">
-    <title>Travel blog</title>
+    <title>Travel blog Login</title>
 </head>
 <body>
-    <div id="content" class="relative">
+    <div id="content">
 
         <div id="header" class="w-screen flex border-b-4 border-blue-800 fixed z-10">
             <div class="w-1/12 bg-gray-200">
@@ -39,19 +39,35 @@
                 <div class="h-12 flex justify-start items-center">
 					<button class="active-button bg-blue-500 text-gray-200 shadow">Contact</button>
 					<span class="mr-4"></span>
-                    <button class="active-button bg-blue-800 text-gray-200 shadow">Admin</button>
+                    <button class="active-button bg-blue-800 text-gray-200 shadow">Index</button>
                 </div>
             </div>
         </div>
 
-        <div id="map" class="h-screen"></div>
+		<div class="w-full h-screen pt-64 pb-6 px-6 bg-gray-200">
+			<form id="loginForm" class="container mx-auto max-w-sm rounded-lg overflow-hidden justify-center bg-gray-400 shadow-sm rounded px-8 pt-6 pb-8 mb-4">
+				<h1 class="text-2xl text-gray-800 mt-4">Login</h1>
+				<div class="my-4">
+					<label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="emailadress">Email address</label>
+					<input class="shadow appearance-none bg-gray-200 rounded w-full py-2 px-3 text-gray-700leading-tight focus:outline-none focus:shadow-outline" id="email" type="email"placeholder="name@example.com" required>
+				</div>
+            	<div class="mb-6">
+					<label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="password"onclick="showPassword()">Password</label>
+					<input class="shadow appearance-none bg-gray-200 rounded w-full py-2 px-3 text-gray-700mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password"placeholder="******************" required>
+					<p id="failmsg" class="flex justify-center text-red-500 text-small italic mt-2 invisible">Email and password don't match.</p>
+            	</div>
+            	<div class="flex items-center justify-center">
+					<button class="inactive-button bg-blue-500 text-gray-200 shadow" type="submit">Sign In</button>
+            	</div>
+            </form>
+            <p class="text-center text-gray-500 text-xs">&copy;2020 Hendrik Harlichs. All rights reserved.</p>
+		</div>
 
     </div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
     <script src="js/config.js"></script>
-    <script src="js/main.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWDP94y8ua-XHvkaFQedaN_V1lG9eHXbU&callback=initMap" async defer></script>
+    <script src="js/admin.js"></script>
 </body>
 </html>

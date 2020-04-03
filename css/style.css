@@ -8,24 +8,24 @@ button:active {
 button.active-button {
 	border-radius: 2rem;
 	font-weight: 400;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	padding: 0.6rem 0;
 	transition: 0.3s;
-	width: 10rem;
+	width: 8rem;
 }
 
 button.active-button:hover {
-	transform: scale(1.125);
+	transform: scale(1.0625);
 }
 
 button.inactive-button {
 	border-radius: 2rem;
 	font-weight: 400;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	opacity: 0.6;
 	padding: 0.6rem 0;
 	pointer-events: none;
-	width: 10rem;
+	width: 8rem;
 }
 
 html,
@@ -38,12 +38,12 @@ body {
 /* Header styling */
 h1.header-h1 {
 	font-family: "Monoton";
-	font-size: 5.2rem;
+	font-size: 3.8rem;
 }
 
 p.header-p {
 	font-weight: 400;
-	font-size: 2rem;
+	font-size: 1.4rem;
 }
 
 /* #pin {
