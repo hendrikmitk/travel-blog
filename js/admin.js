@@ -8,7 +8,7 @@ const db = firebase.firestore();
 const content = document.getElementById("feed");
 
 // Create post html with template literals
-const createStringPost = place =>
+const createStringPost = (place) =>
 	`<div class="mx-auto max-w-sm rounded-lg overflow-hidden justify-center shadow-lg bg-gray-200 border-2 border-blue-800 mb-20">
 	<img class="w-full" src="${place.image ? place.image.src : ""}" alt="${place.image ? place.image.alt : ""}">
 	<div class="px-6 py-4">
@@ -28,8 +28,8 @@ const createStringPost = place =>
 // Iterate through the Firestore database
 db.collection("posts")
 	.get()
-	.then(posts => {
-		posts.forEach(post => {
+	.then((posts) => {
+		posts.forEach((post) => {
 			const firestoreJson = post.data();
 			const firestoreHtml = createStringPost(firestoreJson);
 			const div = document.createElement("div");
@@ -39,7 +39,7 @@ db.collection("posts")
 	});
 
 // Create new blog post
-const createNewBlogPost = e => {
+const createNewBlogPost = (e) => {
 	e.preventDefault();
 
 	// Get values from form
@@ -79,10 +79,10 @@ const createNewBlogPost = e => {
 				src: "img/placeholder.jpg",
 			},
 		})
-		.then(docRef => {
+		.then((docRef) => {
 			console.log("Blog post created with ID: ", docRef.id);
 		})
-		.catch(error => {
+		.catch((error) => {
 			console.error("Error adding document: ", error);
 		});
 };

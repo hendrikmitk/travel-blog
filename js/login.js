@@ -11,6 +11,7 @@ const showPassword = () => {
 	}
 };
 
+// Login function and click handler
 const login = (e) => {
 	e.preventDefault(); // Prevent page reload on-click
 	const email = document.getElementById("email").value; // Get emailadress
@@ -35,3 +36,11 @@ const login = (e) => {
 };
 
 document.getElementById("loginForm").addEventListener("submit", login);
+
+// Back button function and click handler
+const backHandler = (e) => {
+	e.preventDefault(); // Prevent page reload on-click
+	window.location.href = "index.html"; // Go to index.html
+};
+
+document.getElementById("backButton").addEventListener("click", backHandler);

@@ -68,3 +68,11 @@ const closeInfoWindows = () => {
 		infoWindow.close();
 	}
 };
+
+// Login button function and click handler
+const loginHandler = (e) => {
+	e.preventDefault(); // Prevent page reload on-click
+	window.location.href = "login.html"; // Go to login.html
+};
+
+document.getElementById("loginButton").addEventListener("click", loginHandler);
