@@ -1,6 +1,32 @@
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+// Get the currently signed-in user
+firebase.auth().onAuthStateChanged((user) => {
+	if (user) {
+		// User is signed in
+		console.log("Welcome friend :)");
+		document.getElementById("adminButton").classList.remove("invisible");
+		document.getElementById("author-profile").classList.remove("invisible");
+	} else {
+		// No user is signed in
+		console.log("Nobody signed in :(");
+	}
+});
+
+// Basic logout function
+const logout = () => {
+	firebase
+		.auth()
+		.signOut()
+		.then(function () {
+			console.log("Logout successful");
+		})
+		.catch(function (error) {
+			// Error handling
+		});
+};
+
 // Initialize Cloud Firestore
 const db = firebase.firestore();
 
@@ -23,9 +49,6 @@ const createString = (place) =>
 	<p class="px-6 pt-3 pb-6 text-gray-600 text-s font-light"><b>Location:</b> ${place.location.city}, ${place.location.country}</p>
 	</div>
 	</div>`;
-
-// TODO use firebase auth API to check if s/o has signed in, then show button
-// document.getElementById("adminButton").classList.remove("invisible");
 
 // Global arrays for info windows and markers
 const infoWindows = [];
