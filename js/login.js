@@ -1,6 +1,16 @@
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+// Check auth status and adapt site accordingly
+firebase.auth().onAuthStateChanged((user) => {
+	if (user) {
+		// User is signed in
+		window.location.href = "index.html"; // Go to index.html
+	} else {
+		// No user is signed in
+	}
+});
+
 // Toggle password visibility
 const showPassword = () => {
 	var x = document.getElementById("password");
@@ -35,7 +45,7 @@ const login = (e) => {
 		});
 };
 
-document.getElementById("loginForm").addEventListener("submit", login);
+document.getElementById("login-form").addEventListener("submit", login);
 
 // Back button function and click handler
 const backHandler = (e) => {
@@ -43,4 +53,4 @@ const backHandler = (e) => {
 	window.location.href = "index.html"; // Go to index.html
 };
 
-document.getElementById("backButton").addEventListener("click", backHandler);
+document.getElementById("back-button").addEventListener("click", backHandler);

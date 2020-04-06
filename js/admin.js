@@ -1,6 +1,41 @@
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+// Check auth status and adapt site accordingly
+const loginLogoutButton = document.getElementById("login-logout-button");
+firebase.auth().onAuthStateChanged((user) => {
+	if (user) {
+		// User is signed in
+		// document.getElementById("author-profile").classList.remove("invisible");
+		document.getElementById("back-button").classList.remove("invisible");
+		const div = document.createElement("div");
+		div.innerHTML = `<button id="logout-button" class="active-button bg-blue-800 text-gray-200 shadow">Logout</button>`;
+		loginLogoutButton.append(div.firstChild);
+		const logoutHandler = (e) => {
+			e.preventDefault(); // Prevent page reload on-click
+			window.location.href = "index.html"; // Go to index.html
+			logout();
+		};
+		document.getElementById("logout-button").addEventListener("click", logoutHandler);
+	} else {
+		// No user is signed in
+		window.location.href = "login.html";
+	}
+});
+
+// Basic logout function
+const logout = () => {
+	firebase
+		.auth()
+		.signOut()
+		.then(function () {
+			console.log("Logout successful");
+		})
+		.catch(function (error) {
+			// Error handling
+		});
+};
+
 // Initialize Cloud Firestore
 const db = firebase.firestore();
 
@@ -48,14 +83,6 @@ const createNewBlogPost = (e) => {
 	const newPostCity = document.getElementById("grid-city").value;
 	const newPostCountry = document.getElementById("grid-country").value;
 	const newPostDate = new Date();
-
-	console.table([
-		["Title:", newPostTitle],
-		["Text:", newPostText],
-		["City:", newPostCity],
-		["Country:", newPostCountry],
-		["Date:", newPostDate],
-	]);
 
 	// Send to Firestore
 	db.collection("posts")
@@ -106,10 +133,10 @@ const checkInputContinuously = () => {
 	}
 };
 
-// Back button function and click handler
+// Back button functions and eventListener
 const backHandler = (e) => {
 	e.preventDefault(); // Prevent page reload on-click
 	window.location.href = "index.html"; // Go to index.html
 };
 
-document.getElementById("backButton").addEventListener("click", backHandler);
+document.getElementById("back-button").addEventListener("click", backHandler);

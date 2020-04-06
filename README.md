@@ -45,21 +45,21 @@ Goal is to publish a Travel Blog where you display a map and markers with posts 
 
 #### Authentication
 
--   Use Firebase Auth (login with email and password) for authentication.
--   If the user is not logged in:
-    -   they can still see the map with all blog posts
-    -   they do not see an author in the menu bar
-    -   they do not see the "ADMIN" link in the menu bar
-    -   they see a "LOGIN" link in the menu bar
--   The "LOGIN" link in the menu bar leads to a page `login.html` that displays a login form.
--   Unsuccessful login attempts show a general error message "Username and password do not match."
--   If the user successfully logged in:
-    -   they are sent to the world map
-    -   they do not see the "LOGIN" link in the menu bar
-    -   they see the author (profile image, name) in the menu bar
-    -   they see the "ADMIN" link in the menu bar
-    -   they see a "Logout" button in the menu bar behind the author
--   If the user is not logged in and accesses `admin.html` directly in the browser, they are automatically sent to the login form.
+-   ~~Use Firebase Auth (login with email and password) for authentication.~~
+-   ~~If the user is not logged in:~~
+    -   ~~they can still see the map with all blog posts~~
+    -   ~~they do not see an author in the menu bar~~
+    -   ~~they do not see the "ADMIN" link in the menu bar~~
+    -   ~~they see a "LOGIN" link in the menu bar~~
+-   ~~The "LOGIN" link in the menu bar leads to a page `login.html` that displays a login form.~~
+-   ~~Unsuccessful login attempts show a general error message "Username and password do not match."~~
+-   ~~If the user successfully logged in:~~
+    -   ~~they are sent to the world map~~
+    -   ~~they do not see the "LOGIN" link in the menu bar~~
+    -   ~~they see the author (profile image, name) in the menu bar~~
+    -   ~~they see the "ADMIN" link in the menu bar~~
+    -   ~~they see a "Logout" button in the menu bar behind the author~~
+-   ~~If the user is not logged in and accesses `admin.html` directly in the browser, they are automatically sent to the login form.~~
 
 #### Imprint / Contact
 
@@ -76,8 +76,8 @@ Goal is to publish a Travel Blog where you display a map and markers with posts 
 
 #### Tailwind CSS
 
--   Apply Tailwind CSS to the pages where you haven't already used it.
--   Make it pretty. 🤩
+-   ~~Apply Tailwind CSS to the pages where you haven't already used it.~~
+-   ~~Make it pretty.~~ 🤩
 
 ### Optional Bonus Tasks
 

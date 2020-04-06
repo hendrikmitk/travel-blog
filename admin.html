@@ -37,7 +37,11 @@
 				<div class="h-12 flex justify-start items-center">
 					<button class="active-button bg-blue-500 text-gray-200 shadow">Contact</button>
 					<span class="mr-4"></span>
-					<button id="backButton" class="active-button bg-blue-800 text-gray-200 shadow">Back</button>
+					<div id="login-logout-button">
+						<!-- <button id="login-button" class="active-button bg-blue-800 text-gray-200 shadow">Login</button> -->
+					</div>
+					<span class="mr-4"></span>
+					<button id="back-button" class="invisble active-button bg-gray-200 border-2 border-blue-800 text-blue-800 shadow">Back</button>
 				</div>
             </div>
         </div>
@@ -89,6 +93,7 @@
     </div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
     <script src="js/config.js"></script>
     <script src="js/admin.js"></script>

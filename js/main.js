@@ -1,16 +1,37 @@
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-// Get the currently signed-in user
+// Check auth status and adapt site accordingly
+const loginLogoutButton = document.getElementById("login-logout-button");
 firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
 		// User is signed in
-		console.log("Welcome friend :)");
-		document.getElementById("adminButton").classList.remove("invisible");
 		document.getElementById("author-profile").classList.remove("invisible");
+		document.getElementById("admin-button").classList.remove("invisible");
+		const div = document.createElement("div");
+		div.innerHTML = `<button id="logout-button" class="active-button bg-blue-800 text-gray-200 shadow">Logout</button>`;
+		loginLogoutButton.append(div.firstChild);
+		const logoutHandler = (e) => {
+			e.preventDefault();
+			window.location.href = "index.html";
+			logout();
+		};
+		document.getElementById("logout-button").addEventListener("click", logoutHandler);
+		const adminHandler = (e) => {
+			e.preventDefault();
+			window.location.href = "admin.html";
+		};
+		document.getElementById("admin-button").addEventListener("click", adminHandler);
 	} else {
 		// No user is signed in
-		console.log("Nobody signed in :(");
+		const div = document.createElement("div");
+		div.innerHTML = `<button id="login-button" class="active-button bg-blue-800 text-gray-200 shadow">Login</button>`;
+		loginLogoutButton.append(div.firstChild);
+		const loginHandler = (e) => {
+			e.preventDefault();
+			window.location.href = "login.html";
+		};
+		document.getElementById("login-button").addEventListener("click", loginHandler);
 	}
 });
 
@@ -92,19 +113,3 @@ const closeInfoWindows = () => {
 		infoWindow.close();
 	}
 };
-
-// Login button function and click handler
-const loginHandler = (e) => {
-	e.preventDefault();
-	window.location.href = "login.html";
-};
-
-document.getElementById("loginButton").addEventListener("click", loginHandler);
-
-// Admin button function and click handler
-const adminHandler = (e) => {
-	e.preventDefault();
-	window.location.href = "admin.html";
-};
-
-document.getElementById("adminButton").addEventListener("click", adminHandler);
