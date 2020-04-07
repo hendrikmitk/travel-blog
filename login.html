@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="h-12 flex justify-start items-center">
-					<button class="active-button bg-blue-500 text-gray-200 shadow">Contact</button>
+					<button id="contact-button" class="active-button bg-blue-500 text-gray-200 shadow">Contact</button>
 					<span class="mr-4"></span>
                     <button id="back-button" class="active-button bg-blue-800 text-gray-200 shadow">Back</button>
                 </div>
@@ -58,13 +58,16 @@
 					<button class="active-button bg-blue-500 text-gray-200 shadow" type="submit">Sign In</button>
             	</div>
             </form>
-		</div>
+        </div>
+
+        <div id="modal" class="modal-bg z-20"></div>
 
     </div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
     <script src="js/config.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/login.js"></script>
 </body>
 </html>
