@@ -82,8 +82,8 @@ Goal is to publish a Travel Blog where you display a map and markers with posts 
 #### Bonus: Firebase Storage for images
 
 -   Include the Storage API from Firebase.
--   Research how to upload and download pictures with Firebase Storage.
--   Upload your blog post's images to Storage.
+-   ~~Research how to upload and download pictures with Firebase Storage.~~
+-   ~~Upload your blog post's images to Storage.~~
 -   Load the images from Storage when displaying the blog posts.
 -   In the form for creating a new blog post, add an option to upload an image for the blog post to Storage.
 
