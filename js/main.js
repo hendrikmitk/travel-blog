@@ -52,10 +52,10 @@ const logout = () => {
 const db = firebase.firestore();
 
 // Get reference to storage service
-const storage = firebase.storage();
+// const storage = firebase.storage();
 
 // Create child reference
-const imgRef = storageRef.child("img");
+// const imgRef = storageRef.child("img");
 
 // Create info window html with template literals
 const createString = (place) =>
