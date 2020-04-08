@@ -62,7 +62,7 @@ Goal is to publish a Travel Blog where you display a map and markers with posts 
 #### Imprint / Contact
 
 -   ~~Create a link in the menu bar "CONTACT".~~
--   Create a `contact.html` file.
+-   ~~Create a `contact.html` file.~~ _Created a modal constructed with template literals instead._
 -   ~~Put your (and your team mate's) name there.~~
 -   ~~Write 2 sentences about your project.~~
 -   ~~Put your (or if you prefer [Hamburg Coding School's](https://hamburgcodingschool.com/contact/)) contact details:~~
