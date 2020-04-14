@@ -128,16 +128,16 @@ Goal is to publish a Travel Blog where you display a map and markers with posts 
 
 ### Submission
 
-1. Upload your code to a new GitHub repository.
+1. ~~Upload your code to a new GitHub repository.~~
 
--   Remember to remove your API keys.
--   If you worked in a team, link the GitHub accounts of both of you in the README.md.
+-   ~~Remember to remove your API keys.~~
+-   ~~If you worked in a team, link the GitHub accounts of both of you in the README.md.~~
 
-2. Publish your travel blog on GitHub Pages.
+2. ~~Publish your travel blog on GitHub Pages.~~
 
--   Create one login for you (or each team member)
--   Create a guest login
--   Have at least 8 blog posts
+-   ~~Create one login for you (or each team member)~~
+-   ~~Create a guest login~~
+-   ~~Have at least 8 blog posts~~
 
 3. Send us an email with the following information:
 
