@@ -1,3 +1,6 @@
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
 // Create and append static html for contact modal to DOM
 const mdl = document.getElementById("modal");
 const div = document.createElement("div");

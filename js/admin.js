@@ -1,6 +1,3 @@
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
 // Check auth status and adapt site accordingly
 const loginLogoutButton = document.getElementById("login-logout-button");
 firebase.auth().onAuthStateChanged((user) => {

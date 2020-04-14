@@ -1,6 +1,3 @@
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
 // Check auth status and adapt site accordingly
 firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
