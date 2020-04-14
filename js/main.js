@@ -48,12 +48,6 @@ const logout = () => {
 // Initialize Cloud Firestore
 const db = firebase.firestore();
 
-// Get reference to storage service
-// const storage = firebase.storage();
-
-// Create child reference
-// const imgRef = storageRef.child("img");
-
 // Create info window html with template literals
 const createString = (place) =>
 	`<div class="my-4 ml-4 mr-3">
