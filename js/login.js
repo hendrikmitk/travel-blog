@@ -10,12 +10,8 @@ firebase.auth().onAuthStateChanged((user) => {
 
 // Toggle password visibility
 const showPassword = () => {
-	var x = document.getElementById("password");
-	if (x.type === "password") {
-		x.type = "text";
-	} else {
-		x.type = "password";
-	}
+	const pwdInput = document.getElementById("password");
+	pwdInput.type === "password" ? (pwdInput.type = "text") : (pwdInput.type = "password");
 };
 
 // Login function and click handler
