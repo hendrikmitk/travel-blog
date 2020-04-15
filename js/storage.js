@@ -16,8 +16,8 @@ db.collection("posts") // db is defined in main.js
 			imgRef
 				.getDownloadURL()
 				.then(function (url) {
-					console.log("File name:", imgRef.name);
-					console.log("Storage image url:", url);
+					// console.log("File name:", imgRef.name);
+					// console.log("Storage image url:", url);
 				})
 				.catch(function (error) {
 					switch (error.code) {
