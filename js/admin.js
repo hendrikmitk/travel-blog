@@ -59,6 +59,7 @@ const createStringPost = (place) =>
 
 // Iterate through the Firestore database
 db.collection("posts")
+	.orderBy("date")
 	.get()
 	.then((posts) => {
 		posts.forEach((post) => {
